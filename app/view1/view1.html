@@ -1,3 +1,6 @@
+<!--remove when project complete - this is here for WebStorm-->
+<link rel="stylesheet" href="ignore/bootstrap.min.css">
+<!--remove stop-->
 <style>
     .bckGndImg {
         background: url({{backGround}});
@@ -7,11 +10,20 @@
 </style>
 
 <div class="viewContainer bckGndImg">
+    <div class="row top-row">
+        <div class="col-xs-2 top-col-1">top1</div>
+        <div class="col-xs-8 top-col-10 text-center">top10</div>
+        <div class="col-xs-2 top-col-1 text-right">top1</div>
+    </div>
+    <div class="row middle-row">
+        <div class="col-xs-2 middle-col-1"><a href="#/view1"><i class="fa fa-chevron-circle-left fa-4x"></i></a></div>
+        <div class="col-xs-8 middle-col-10 text-center"><p>weather data: {{weatherData.city.name}}</p></div>
+        <div class="col-xs-2 middle-col-1 text-right"><a href="#/view2"><i class="fa fa-chevron-circle-right fa-4x"></i></a></div>
+    </div>
+    <div class="row bottom-row">
+        <div class="col-xs-2 bottom-col-1">bottom1</div>
+        <div class="col-xs-8 bottom-col-10 text-center">bottom10</div>
+        <div class="col-xs-2 bottom-col-10 text-right">bottom1</div>
+    </div>
 
-<ul class="menu">
-    <li><a href="#/view1">view1</a></li>
-    <li><a href="#/view2">view2</a></li>
-</ul>
-
-<p>weather data: </p><p>{{weatherData.city.name}}</p>
 </div>
