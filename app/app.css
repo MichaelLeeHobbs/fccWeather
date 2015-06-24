@@ -4,5 +4,45 @@ html, body, #body, #ngView {
 }
 
 .viewContainer {
-
+    padding: 15px;
 }
+
+/* -- rows -- */
+.viewContainer > .row {
+    max-width: 100%;
+    margin: 0;
+}
+
+.top-row {
+    height: 40%;
+}
+.middle-row {
+    height: 50%;
+}
+.bottom-row {
+    height: 10%;
+}
+
+
+
+.col-xs-2, .col-xs-8 {
+    border: solid red thin;
+    padding: 0;
+}
+
+.row {
+    border: solid green thin;
+}
+
+
+/*
+.top-row>.col-xs-1, .top-row>.col-xs-10 {
+    height: 100%;
+}
+.middle-row>.col-xs-1, .middle-row>.col-xs-10 {
+    height: 100%;
+}
+.bottom-row>.col-xs-1, .bottom-row>.col-xs-10 {
+    height: 100%;
+}
+*/
