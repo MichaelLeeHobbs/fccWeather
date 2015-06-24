@@ -1,9 +1,8 @@
-html, body {
+html, body, #body, #ngView {
     height: 100%;
+    padding: 0;
 }
 
-#body {
-    background: url("http://static.pexels.com/wp-content/uploads/2014/06/clouds-colorful-colourful-1029.jpg");
-    background-size: cover;
-    height: 100%;
+.viewContainer {
+
 }
