@@ -25,4 +25,6 @@ angular.module('myApp.view1', ['ngRoute'])
 
     .controller('View1Ctrl', ['$scope', 'weatherData', function ($scope, weatherData) {
         $scope.weatherData = weatherData.data;
+        //todo place holder img
+        $scope.backGround = "http://static.pexels.com/wp-content/uploads/2014/06/clouds-colorful-colourful-1029.jpg";
     }]);
