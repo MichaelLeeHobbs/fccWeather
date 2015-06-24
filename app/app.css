@@ -23,7 +23,15 @@ html, body, #body, #ngView {
     height: 10%;
 }
 
+.middle-row>.col-xs-2 {
+    padding: 0;
+}
+.middle-row>.col-xs-2 > a {
+    color: grey;
+}
 
+/** debug **/
+/* todo remove*/
 
 .col-xs-2, .col-xs-8 {
     border: solid red thin;
