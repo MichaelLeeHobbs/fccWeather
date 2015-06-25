@@ -1,3 +1,6 @@
+* {
+    font-family: verdana, sans-serif;
+}
 html, body, #body, #ngView {
     height: 100%;
     padding: 0;
@@ -23,16 +26,46 @@ html, body, #body, #ngView {
     height: 10%;
 }
 
+/** -- columns -- **/
+.tile {
+    border-radius: 10px;
+    width: auto;
+    -webkit-box-shadow: 10px 10px 34px 0 rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 34px 0 rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 34px 0 rgba(0,0,0,0.75);
+    padding: 10px 25px 10px 25px;
+    font-weight: bold;
+
+    color: white;
+    background-color:black;
+    z-index:0;
+    opacity:0.5;
+}
+
+
 .middle-row>.col-xs-2 {
     padding: 0;
 }
 .middle-row>.col-xs-2 > a {
-    color: grey;
+    color: whitesmoke;
+}
+
+h1, h2, h3 {
+    color: goldenrod;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.71);
+}
+
+.no-pad {
+    padding: 0;
+}
+
+#temp {
+    color: black;
 }
 
 /** debug **/
 /* todo remove*/
-
+/*
 .col-xs-2, .col-xs-8 {
     border: solid red thin;
     padding: 0;
@@ -40,7 +73,7 @@ html, body, #body, #ngView {
 
 .row {
     border: solid green thin;
-}
+}*/
 
 
 /*
