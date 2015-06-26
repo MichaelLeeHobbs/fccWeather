@@ -26,7 +26,7 @@ angular.module('myApp.view1', ['ngRoute'])
     .controller('View1Ctrl', ['$scope', '$animate', '$timeout', 'weatherData', function ($scope, $animate, $timeout, weatherData) {
         $scope.weatherData = weatherData.data;
         $scope.day = 0;
-        $scope.tempMode = 'c';
+        $scope.tempMode = 'C';
 
 
         // todo remove
@@ -160,21 +160,21 @@ angular.module('myApp.view1', ['ngRoute'])
         };
         $scope.tempMin = function (day, mode) {
             switch (mode) {
-                case 'c':
+                case 'C':
                     return kelvinToCelsius($scope.weatherData.list[day].temp.min);
-                case 'k':
+                case 'K':
                     return $scope.weatherData.list[day].temp.min;
-                case 'f':
+                case 'F':
                     return kelvinToFahrenheit($scope.weatherData.list[day].temp.min);
             }
         };
         $scope.tempMax = function (day, mode) {
             switch (mode) {
-                case 'c':
+                case 'C':
                     return kelvinToCelsius($scope.weatherData.list[day].temp.max);
-                case 'k':
+                case 'K':
                     return $scope.weatherData.list[day].temp.max;
-                case 'f':
+                case 'F':
                     return kelvinToFahrenheit($scope.weatherData.list[day].temp.max);
             }
         };
