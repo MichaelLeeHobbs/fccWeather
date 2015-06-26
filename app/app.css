@@ -7,16 +7,21 @@ html, body, #body, #ngView {
 }
 
 .viewContainer {
-    padding: 15px;
+    height: 100%;
+    width: 100%;
+    position: relative;
 }
 
 /* -- rows -- */
 .viewContainer > .row {
     max-width: 100%;
     margin: 0;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .top-row {
+    padding-top: 15px;
     height: 40%;
 }
 .middle-row {
@@ -63,27 +68,50 @@ h1, h2, h3 {
     color: black;
 }
 
+
+.dropdown-menu>li {
+    cursor:pointer;
+}
+
 /** debug **/
 /* todo remove*/
 /*
-.col-xs-2, .col-xs-8 {
+.col-xs-3, .col-xs-2, .col-xs-6, .col-xs-10 {
     border: solid red thin;
     padding: 0;
 }
 
 .row {
     border: solid green thin;
-}*/
+}
 
 
-/*
-.top-row>.col-xs-1, .top-row>.col-xs-10 {
+
+.top-row>.col-xs-3, .top-row>.col-xs-6 {
     height: 100%;
 }
-.middle-row>.col-xs-1, .middle-row>.col-xs-10 {
+.middle-row>.col-xs-3, .middle-row>.col-xs-6 {
     height: 100%;
 }
-.bottom-row>.col-xs-1, .bottom-row>.col-xs-10 {
+.bottom-row>.col-xs-3, .bottom-row>.col-xs-6 {
     height: 100%;
 }
 */
+
+.bgImg {
+//background: url({{backGround}});
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+
+}
+.bgImg.transparent {
+    opacity: 0;
+    background: black;
+}
