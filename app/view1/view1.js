@@ -23,7 +23,7 @@ angular.module('myApp.view1', ['ngRoute'])
         });
     }])
 
-    .controller('View1Ctrl', ['$scope', 'weatherData', function ($scope, weatherData) {
+    .controller('View1Ctrl', ['$scope', '$animate', 'weatherData', function ($scope, $animate, weatherData) {
         $scope.weatherData = weatherData.data;
         $scope.day = 0;
         $scope.tempMode = 'c';
@@ -81,15 +81,37 @@ angular.module('myApp.view1', ['ngRoute'])
                     return "https://static.pexels.com/photos/2271/clouds-cloudy-field-meadow-large.jpg";
             }
         };
-        $scope.backGround = getBG($scope.day);
+
+        var activeImg = '.bgImgOne';
+        var inactiveImg = '.bgImgTwo';
+        $scope.bgOne = getBG($scope.day);
+        $scope.bgTwo = getBG($scope.day);
+
+        var toggleImg = function() {
+            if (activeImg === '.bgImgOne') {
+                $scope.bgTwo = getBG($scope.day);
+            } else {
+                $scope.bgOne = getBG($scope.day);
+            }
+
+            if ($scope.bgOne !== $scope.bgTwo) {
+                $animate.addClass(angular.element(activeImg), 'transparent', {});
+                $animate.removeClass(angular.element(inactiveImg), 'transparent', {});
+
+                var tmp = activeImg;
+                activeImg = inactiveImg;
+                inactiveImg = tmp;
+            }
+        };
+
 
         $scope.next = function () {
             $scope.day = (++$scope.day < $scope.weatherData.list.length) ? $scope.day : $scope.weatherData.list.length - 1;
-            $scope.backGround = getBG($scope.day);
+            toggleImg();
         };
         $scope.prev = function () {
             $scope.day = (--$scope.day >= 0) ? $scope.day : 0;
-            $scope.backGround = getBG($scope.day);
+            toggleImg();
         };
 
         var kelvinToCelsius = function (k) {
