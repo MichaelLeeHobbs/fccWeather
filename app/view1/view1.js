@@ -23,7 +23,7 @@ angular.module('myApp.view1', ['ngRoute'])
         });
     }])
 
-    .controller('View1Ctrl', ['$scope', '$animate', 'weatherData', function ($scope, $animate, weatherData) {
+    .controller('View1Ctrl', ['$scope', '$animate', '$timeout', 'weatherData', function ($scope, $animate, $timeout, weatherData) {
         $scope.weatherData = weatherData.data;
         $scope.day = 0;
         $scope.tempMode = 'c';
@@ -86,8 +86,12 @@ angular.module('myApp.view1', ['ngRoute'])
         var inactiveImg = '.bgImgTwo';
         $scope.bgOne = getBG($scope.day);
         $scope.bgTwo = getBG($scope.day);
+        $scope.btnDisabled = false;
+
 
         var toggleImg = function() {
+            if ($scope.btnDisabled) return;
+
             if (activeImg === '.bgImgOne') {
                 $scope.bgTwo = getBG($scope.day);
             } else {
@@ -95,21 +99,28 @@ angular.module('myApp.view1', ['ngRoute'])
             }
 
             if ($scope.bgOne !== $scope.bgTwo) {
+                $scope.btnDisabled = true;
                 $animate.addClass(angular.element(activeImg), 'transparent', {});
                 $animate.removeClass(angular.element(inactiveImg), 'transparent', {});
 
                 var tmp = activeImg;
                 activeImg = inactiveImg;
                 inactiveImg = tmp;
+
+                $timeout(function() {
+                    $scope.btnDisabled = false;
+                }, 1000);
             }
         };
 
 
         $scope.next = function () {
+            if ($scope.btnDisabled) return;
             $scope.day = (++$scope.day < $scope.weatherData.list.length) ? $scope.day : $scope.weatherData.list.length - 1;
             toggleImg();
         };
         $scope.prev = function () {
+            if ($scope.btnDisabled) return;
             $scope.day = (--$scope.day >= 0) ? $scope.day : 0;
             toggleImg();
         };
@@ -174,3 +185,4 @@ angular.module('myApp.view1', ['ngRoute'])
         };
 
     }]);
+
