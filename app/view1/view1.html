@@ -39,9 +39,9 @@
                                         Temperature <span class="caret"></span>
                                     </button>
                                     <ul class="dropdown-menu" role="menu">
-                                        <li ng-click="tempMode = 'c'">Celsius</li>
-                                        <li ng-click="tempMode = 'k'">Kelvin</li>
-                                        <li ng-click="tempMode = 'f'">Fahrenheit</li>
+                                        <li ng-click="tempMode = 'C'">Celsius</li>
+                                        <li ng-click="tempMode = 'K'">Kelvin</li>
+                                        <li ng-click="tempMode = 'F'">Fahrenheit</li>
                                     </ul>
                                 </div>
                             </div>
@@ -49,13 +49,13 @@
                             <div class="row ">
                                 <div class="col-xs-11 col-xs-offset-1 no-pad">
                                     <span>Low: </span>
-                                    <span id="tempMin">{{tempMin(day, tempMode) | number: 1}}</span>
+                                    <span id="tempMin">{{tempMin(day, tempMode) | number: 1}} &deg;{{tempMode}}</span>
                                 </div>
                             </div>
                             <div class="row ">
                                 <div class="col-xs-11 col-xs-offset-1 no-pad">
                                     <span>High: </span>
-                                    <span id="tempMax">{{tempMax(day, tempMode) | number: 1}}</span>
+                                    <span id="tempMax">{{tempMax(day, tempMode) | number: 1}} &deg;{{tempMode}}</span>
                                 </div>
                             </div>
                         </div>
