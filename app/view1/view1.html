@@ -1,35 +1,30 @@
-<!--remove when project complete - this is here for WebStorm--
-<link rel="stylesheet" href="ignore/bootstrap.min.css">
-<!--remove stop-->
 <div class="viewContainer text-center">
     <img class="bgImgOne bgImg" ng-src="{{bgOne}}">
     <img class="bgImgTwo bgImg transparent" ng-src="{{bgTwo}}">
 
     <div class="row top-row">
-        <div class="col-xs-3 text-left">
-            <div class="row">
+        <div class="col-xs-3 text-left pull-left">
                 <div class="col-xs-12 tile">
-                    <div id="lat" class="row">lat: {{weatherData.city.coord.lat | number}}</div>
-                    <div id="lon" class="row">lon: {{weatherData.city.coord.lon | number}}</div>
+                    <div class="row">lat: {{weatherData.city.coord.lat | number}}</div>
+                    <div class="row">lon: {{weatherData.city.coord.lon | number}}</div>
                 </div>
-            </div>
         </div>
         <div class="col-xs-6">
-            <div class="row"><h1 id="name">{{weatherData.city.name}}, {{weatherData.city.country}}</h1></div>
+            <div class="row"><h1>{{weatherData.city.name}}, {{weatherData.city.country}}</h1></div>
             <div class="row">
-                <div class="col-xs-12"><h2 id="date">{{weatherData.list[day].dt * 1000 | date}}</h2></div>
+                <div class="col-xs-12"><h2>{{weatherData.list[day].dt * 1000 | date}}</h2></div>
             </div>
         </div>
-        <div class="col-xs-3 text-left">
+        <div class="col-xs-3 text-left pull-right">
             <div class="row">
                 <div class="col-xs-12 tile pull-right">
                     <div class="row">
-                        <span id="desc">{{toTitleCase(weatherData.list[day].weather[0].description)}}</span>
+                        <span>{{toTitleCase(weatherData.list[day].weather[0].description)}}</span>
                     </div>
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="row">
-                                <div id="temp" class="btn-group" dropdown is-open="status.isopen">
+                                <div class="btn-group" dropdown is-open="status.isopen">
                                     <button type="button" class="btn btn-primary dropdown-toggle" dropdown-toggle
                                             ng-disabled="disabled">
                                         Temperature <span class="caret"></span>
@@ -45,28 +40,28 @@
                             <div class="row ">
                                 <div class="col-xs-11 col-xs-offset-1 no-pad">
                                     <span>Low: </span>
-                                    <span id="tempMin">{{tempMin(day, tempMode) | number: 1}} &deg;{{tempMode}}</span>
+                                    <span>{{tempMin(day, tempMode) | number: 1}} &deg;{{tempMode}}</span>
                                 </div>
                             </div>
                             <div class="row ">
                                 <div class="col-xs-11 col-xs-offset-1 no-pad">
                                     <span>High: </span>
-                                    <span id="tempMax">{{tempMax(day, tempMode) | number: 1}} &deg;{{tempMode}}</span>
+                                    <span>{{tempMax(day, tempMode) | number: 1}} &deg;{{tempMode}}</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <span>Humidity: </span>
-                        <span id="humidity">{{weatherData.list[day].humidity}}%</span>
+                        <span>{{weatherData.list[day].humidity}}%</span>
                     </div>
                     <div class="row">
                         <span>Pressure: </span>
-                        <span id="pressure">{{weatherData.list[day].pressure}}</span>
+                        <span>{{weatherData.list[day].pressure}}</span>
                     </div>
                     <div class="row">
                         <span>Wind: </span>
-                        <span id="wind">{{degToCompassDir(weatherData.list[day].deg)}} at {{mpsToKph(weatherData.list[day].speed) | number: 1}}kph</span>
+                        <span>{{degToCompassDir(weatherData.list[day].deg)}} at {{mpsToKph(weatherData.list[day].speed) | number: 1}}kph</span>
                     </div>
                 </div>
             </div>
