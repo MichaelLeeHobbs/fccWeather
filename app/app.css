@@ -73,33 +73,7 @@ h1, h2, h3 {
     cursor:pointer;
 }
 
-/** debug **/
-/* todo remove*/
-/*
-.col-xs-3, .col-xs-2, .col-xs-6, .col-xs-10 {
-    border: solid red thin;
-    padding: 0;
-}
-
-.row {
-    border: solid green thin;
-}
-
-
-
-.top-row>.col-xs-3, .top-row>.col-xs-6 {
-    height: 100%;
-}
-.middle-row>.col-xs-3, .middle-row>.col-xs-6 {
-    height: 100%;
-}
-.bottom-row>.col-xs-3, .bottom-row>.col-xs-6 {
-    height: 100%;
-}
-*/
-
 .bgImg {
-//background: url({{backGround}});
     background-size: cover;
     height: 100%;
     width: 100%;
