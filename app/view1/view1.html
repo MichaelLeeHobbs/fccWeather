@@ -19,10 +19,6 @@
             <div class="row">
                 <div class="col-xs-12"><h2 id="date">{{weatherData.list[day].dt * 1000 | date}}</h2></div>
             </div>
-            <!--
-            <h2>Free Code Camp Zipline</h2>
-
-            <h3>Local Weather App</h3>-->
         </div>
         <div class="col-xs-3 text-left">
             <div class="row">
@@ -77,16 +73,44 @@
         </div>
     </div>
     <div class="row middle-row">
-        <div class="col-xs-2 pull-left tile"><i id="prev" ng-click="prev()" ng-dblclick="return" class="fa fa-chevron-left fa-4x"></i></div>
+        <div class="col-xs-2 pull-left tile"><i id="prev" ng-click="prev()" ng-dblclick="return"
+                                                class="fa fa-chevron-left fa-4x"></i></div>
         <div class="col-xs-8"></div>
-        <div class="col-xs-2 pull-right tile"><i id="next" ng-click="next()" ng-dblclick="return" class="fa fa-chevron-right fa-4x"></i>
+        <div class="col-xs-2 pull-right tile"><i id="next" ng-click="next()" ng-dblclick="return"
+                                                 class="fa fa-chevron-right fa-4x"></i>
         </div>
     </div>
     <div class="row bottom-row">
-        <div class="col-xs-2"></div>
-        <div class="col-xs-8"></div>
-        <div class="col-xs-2"></div>
-    </div>
+        <div class="row">
+            <div class="projectBar">
+                <link rel="stylesheet" href="projectBar.css">
+                <span>created by: <a href="http://www.MichaelLeeHobbs.net">Michael Lee Hobbs</a></span>
+                <h5>licence: <a href="https://github.com/MichaelLeeHobbs/fccWeather/blob/master/LICENSE">LICENSE</a></h5>
+                <a href="https://github.com/MichaelLeeHobbs/fccWeather">
+                    <i class='fa fa-github fa-2x'></i>
+                </a>
+                <a href="http://www.freecodecamp.com/michaelhobbs">
+                    <img class="imgRound" src="http://static-cdn.jtvnw.net/jtv_user_pictures/freecodecamp-profile_image-f1b681380c0b0380-300x300.png">
+                </a>
+                <a href="https://plus.google.com/u/1/107371504702151614419/posts">
+                    <i class="fa fa-google-plus fa-2x"></i>
+                </a>
+                <a href="https://twitter.com/michaelleehobbs">
+                    <i class="fa fa-twitter fa-2x"></i>
+                </a>
+                <a href="https://www.hackerrank.com/Michael_Hobbs">
+                    <img src="https://d3keuzeb2crhkn.cloudfront.net/hackerrank/assets/brand/h_mark_sm-89688e441bdf2c2eca6f2071f7483ea8.png">
+                </a>
+                <a href="https://www.codingame.com/profile/8504b6da519d3daf2a3ebf31ebb55baf691748">
+                    <img class="imgRound" src="https://www.codingame.com/common/images/878e74eb.img_general_avatar.png">
+                </a>
 
+                <a href="http://www.michaelleehobbs.net/#/connect">
+                    <i class="fa fa-envelope-o fa-2x"></i>
+                </a>
+
+            </div>
+        </div>
+    </div>
 </div>
 
