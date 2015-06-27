@@ -1,0 +1,51 @@
+
+.projectBar {
+    position: absolute;
+    bottom: 5px;
+    left: 1%;
+    border-radius: 10px;
+    height: 45px;
+    width: 98%;
+    -webkit-box-shadow: 10px 10px 34px 0 rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 34px 0 rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 34px 0 rgba(0,0,0,0.75);
+    padding: 10px;
+    font-weight: bold;
+
+    color: white;
+    background-color:black;
+    z-index:0;
+    opacity:0.7;
+}
+
+.projectBar > span {
+    position: absolute;
+    top: 2px;
+    left: 5px;
+}
+
+.projectBar > h5 {
+    position: absolute;
+    left: 5px;
+    bottom: 0px;
+}
+
+.projectBar > a {
+    float: right;
+    padding-left: 5px;
+}
+
+.projectBar > a > img {
+    width: 28px;
+    height: 28px;
+}
+
+.projectBar > a > i {
+    color: grey;
+    text-decoration: none;
+}
+
+.imgRound {
+    border-radius: 90px;
+}
+
