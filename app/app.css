@@ -65,12 +65,13 @@ h1, h2, h3 {
 }
 
 #temp {
-    color: black;
+    color: goldenrod;
 }
 
 
 .dropdown-menu>li {
     cursor:pointer;
+    color: black;
 }
 
 .bgImg {
