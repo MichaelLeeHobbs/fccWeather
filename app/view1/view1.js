@@ -28,11 +28,6 @@ angular.module('myApp.view1', ['ngRoute'])
         $scope.day = 0;
         $scope.tempMode = 'C';
 
-
-        // todo remove
-        console.log($scope.weatherData);
-
-
         var getBG = function (day) {
             var id = $scope.weatherData.list[day].weather[0].id;
 

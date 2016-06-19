@@ -24,7 +24,6 @@ angular.module('myApp.services', [])
         (function init(){
             loadJSON(function(response){
                 apiKey = JSON.parse(response).openWeatherMap;
-                console.log(apiKey)
             });
         })();
 
@@ -37,7 +36,6 @@ angular.module('myApp.services', [])
 
         var sdo = {
             query: function (lat, lon, refresh) {
-                console.log(apiKey)
                 // validations
                 refresh = refresh || false;
                 // valid lat = -90...90
