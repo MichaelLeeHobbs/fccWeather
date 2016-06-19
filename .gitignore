@@ -6,3 +6,5 @@ ignore/
 tmp
 .DS_Store
 .idea
+
+env/
